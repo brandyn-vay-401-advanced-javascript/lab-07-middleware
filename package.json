@@ -1,20 +1,15 @@
 {
-  "name": "lab-07-middleware",
+  "name": "test-practice",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brandyn-vay-401-advanced-javascript/lab-07-middleware.git"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brandyn-vay-401-advanced-javascript/lab-07-middleware/issues"
-  },
-  "homepage": "https://github.com/brandyn-vay-401-advanced-javascript/lab-07-middleware#readme"
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
