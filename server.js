@@ -41,14 +41,14 @@ app.get('/b', squareIt(5), (req,res) => {
   console.log(req.number);
 });
 
-app.get('/c', router);
+app.use(router);
 
 // Errors
-app.get((err, req, res, next) => {
+app.use((err, req, res, next) => {
   console.log('Something went wrong, Error');
   res.status(500);
   res.send('Something went wrong, ERROR ヾ｜￣ー￣｜ﾉ')
-})
+});
 
 // Not Found
 app.use('*', (req, res, next) => {
