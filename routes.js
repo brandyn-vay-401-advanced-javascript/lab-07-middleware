@@ -7,9 +7,9 @@ router.use('/c', (req,res) => {
   res.status(200).send('Route C');
 });
 
-router.use('/d', (err,req,res) => {
+router.use('/d', (err,req,res,next) => {
   res.status(200).send('Route D');
-  router.next(err);
+  next(err);
 });
 
 module.exports = router;
