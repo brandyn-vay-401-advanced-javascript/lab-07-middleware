@@ -39,6 +39,7 @@ app.get('/a', (req,res) => {
 app.get('/b', squareIt(5), (req,res) => {
   res.status(200).send('Route B');
   console.log(req.number);
+  res.send(req.number);
 });
 
 app.use(router);

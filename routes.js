@@ -1,14 +1,15 @@
 'use strict';
 
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 router.use('/c', (req,res) => {
   res.status(200).send('Route C');
 });
 
-router.use('/d', (req,res) => {
+router.use('/d', (err,req,res) => {
   res.status(200).send('Route D');
+  router.next(err);
 });
 
 module.exports = router;
