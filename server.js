@@ -37,7 +37,7 @@ app.get('/a', (req,res) => {
 });
 
 app.get('/b', squareIt(5), (req,res) => {
-  res.status(200).send('Route B');
+  res.status(200).send(`Route B, numbers = ${req.number}`);
   console.log(req.number);
 });
 
